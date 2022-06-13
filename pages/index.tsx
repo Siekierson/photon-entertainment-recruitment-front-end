@@ -1,12 +1,32 @@
-import type { NextPage } from 'next'
-import styles from '../styles/Home.module.css'
+import { useState } from "react";
+import type { NextPage } from "next";
 
-const VideoList: NextPage = () => {
-  return (
-    <div className={styles.Container}>
-      <h1>Here goes view with list of all videos</h1>
-    </div>
-  )
+import Layout from "../src/components/layout";
+import { ApiUrl } from "../src/helpers/ApiConfig";
+import MainListWrapper from "../src/components/MainViewWrapper";
+import VideoTile from "../src/components/VideoTile";
+interface ListType {
+  id: string;
+  attributes: object;
 }
+const VideoList: NextPage = ({ initialData }: any) => {
+  const [videos, setVideos] = useState(initialData);
+  return (
+    <Layout>
+      <MainListWrapper>
+        {videos.map((item: ListType) => {
+          const { id, attributes } = item;
+          return <VideoTile key={id} props={attributes} />;
+        })}
+      </MainListWrapper>
+    </Layout>
+  );
+};
 
-export default VideoList
+VideoList.getInitialProps = async () => {
+  const req = await fetch(`${ApiUrl}/videos?pagination[pageSize]=10`);
+  const data = await req.json();
+  return { initialData: data.data };
+};
+
+export default VideoList;

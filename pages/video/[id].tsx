@@ -1,7 +1,10 @@
+import Layout from "../../src/components/layout";
 function VideoPage() {
-    return <div>
-        <h1>Here goes video view with embeded YouTube video, its information, user comments</h1>
-    </div>
+  return (
+    <Layout>
+        
+    </Layout>
+  );
 }
 
 export default VideoPage;
