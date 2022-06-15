@@ -1,24 +1,17 @@
 import { useState } from "react";
 import type { NextPage } from "next";
-
 import Layout from "../src/components/layout";
 import { ApiUrl } from "../src/helpers/ApiConfig";
-import MainListWrapper from "../src/components/MainViewWrapper";
-import VideoTile from "../src/components/VideoTile";
-interface ListType {
-  id: string;
-  attributes: object;
+import ListVideo from "../src/components/ListVideo";
+import { Video } from "./../types";
+interface Props {
+  initialData: Video[];
 }
-const VideoList: NextPage = ({ initialData }: any) => {
+const VideoList = ({ initialData }: Props) => {
   const [videos, setVideos] = useState(initialData);
   return (
     <Layout>
-      <MainListWrapper>
-        {videos.map((item: ListType) => {
-          const { id, attributes } = item;
-          return <VideoTile key={id} props={attributes} />;
-        })}
-      </MainListWrapper>
+      <ListVideo videos={videos} />
     </Layout>
   );
 };

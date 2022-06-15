@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
+import Link from "next/link";
 import logo from "../../public/vercel.svg";
 const NavWrapper = styled.div`
   height: 60px;
@@ -28,7 +29,9 @@ const InputWrapper = styled.div`
 
 const Navbar = () => (
   <NavWrapper>
-    <Image src={logo} alt="logo" height={1} />
+    <Link href="/">
+      <Image src={logo} alt="logo" height={1} />
+    </Link>
     <InputWrapper>
       <Input />
       <button>Wyszukaj</button>

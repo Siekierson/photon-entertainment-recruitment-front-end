@@ -1,0 +1,28 @@
+// import { createContext, ReactNode, useContext, useState } from "react";
+
+// const AppContext = createContext();
+// // comments
+// type T = {
+//   filmId: string;
+//   message: string;
+// };
+// export function AppWrapper({ children }: ReactNode) {
+//   const [comments, setComments] = useState<Array<T>>([]);
+
+//   return (
+//     <AppContext.Provider value={(comments, setComments)}>
+//       {children}
+//     </AppContext.Provider>
+//   );
+// }
+
+// export function useAppContext() {
+//   return useContext(AppContext);
+// }
+
+
+Type '{ ({ initialData }: Props): JSX.Element; getInitialProps(): Promise<{ initialData: any; }>; }' is not assignable to type 'NextPage<{}, {}>'.
+  Type '{ ({ initialData }: Props): JSX.Element; getInitialProps(): Promise<{ initialData: any; }>; }' is not assignable to type 'FunctionComponent<{}> & { getInitialProps?(context: NextPageContext): {} | Promise<{}>; }'.
+    Type '{ ({ initialData }: Props): JSX.Element; getInitialProps(): Promise<{ initialData: any; }>; }' is not assignable to type 'FunctionComponent<{}>'.
+      Types of parameters '__0' and 'props' are incompatible.
+        Property 'initialData' is missing in type '{}' but required in type 'Props'.

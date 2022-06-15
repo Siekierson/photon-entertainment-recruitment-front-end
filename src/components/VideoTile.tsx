@@ -8,7 +8,7 @@ const Container = styled.a`
     font-size: 20px;
   }
   > h3 {
-    font-size: 15px;
+    font-size: 10px;
   }
 `;
 const ThumbNail = styled(Image)`
