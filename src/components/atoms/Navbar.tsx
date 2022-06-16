@@ -7,7 +7,7 @@ const NavWrapper = styled.div`
   width: 100vw;
   background-color: #414141;
   display: grid;
-  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-columns: 1fr 4fr 1fr;
 `;
 const Input = styled.input`
   background-color: transparent;

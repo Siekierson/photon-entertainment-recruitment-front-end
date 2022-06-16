@@ -1,6 +1,6 @@
-import ListVideo from "../ListVideo";
+import ListVideo from "../molecues/ListVideo";
 import styled from "styled-components";
-import MoreButton from "../MoreButton";
+import MoreButton from "../atoms/MoreButton";
 import { Video } from "../../../types";
 interface VideoProps {
   videos: Video[];

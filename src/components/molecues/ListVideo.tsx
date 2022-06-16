@@ -1,6 +1,6 @@
-import VideoTile from "./VideoTile";
+import VideoTile from "../atoms/VideoTile";
 import styled from "styled-components";
-import { Video } from "../../types";
+import { Video } from "../../../types";
 const ListWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -16,7 +16,7 @@ const ListVideo = ({ videos }: Props) => {
     <ListWrapper>
       {videos.map((item: Video) => {
         const { id, attributes } = item;
-        return <VideoTile key={id} props={attributes} />;
+        return <VideoTile key={`${Math.random()}`} attributes={attributes} />;
       })}
     </ListWrapper>
   );

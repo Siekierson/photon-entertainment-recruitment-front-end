@@ -3,8 +3,8 @@ import { VideosContext } from "../../src/contexts/VideosContext";
 import { useRouter } from "next/router";
 import Layout from "../../src/components/layout";
 import { ApiUrl } from "../../src/helpers/ApiConfig";
-import VideoPageLeft from "../../src/components/templates/VideoPageLeft";
-import VideoPageRight from "../../src/components/templates/VideoPageRight";
+import VideoPageLeft from "../../src/components/organisms/VideoPageLeft";
+import VideoPageRight from "../../src/components/organisms/VideoPageRight";
 import styled from "styled-components";
 import { Video } from "../../types";
 

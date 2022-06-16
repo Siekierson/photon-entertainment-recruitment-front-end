@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import styled from "styled-components";
-import { VideosContext } from "../contexts/VideosContext";
+import { VideosContext } from "../../contexts/VideosContext";
 const Button = styled.button`
   display: block;
   background-color: transparent;

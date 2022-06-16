@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Navbar from "./Navbar";
+import Navbar from "./atoms/Navbar";
 interface LayoutProps {
   children: React.ReactNode;
 }
@@ -10,8 +10,9 @@ const Main = styled.div`
     rgba(85, 85, 85, 1) 100%
   );
   min-height: 100vh;
-  > * {
+  * {
     color: #ddd;
+    margin: 5px;
   }
 `;
 export default function Layout({ children }: LayoutProps) {

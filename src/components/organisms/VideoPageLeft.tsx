@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { VideosContext } from "../../contexts/VideosContext";
 import { Video, Attributes } from "../../../types";
 import { AiFillLike, AiFillDislike } from "react-icons/Ai";
-import Comments from "./../Comments";
+import Comments from "../molecues/Comments";
 const Wrapper = styled.div`
   width: 65%;
   padding: 20px;

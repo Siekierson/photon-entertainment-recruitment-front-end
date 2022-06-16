@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
+import { Attributes } from "../../../types";
 const Container = styled.a`
   padding: 4px;
   display: block;
@@ -21,8 +22,12 @@ const Container = styled.a`
 const ThumbNail = styled(Image)`
   display: block;
 `;
-const VideoTile = ({ props }: any) => {
-  const { title, viewCount, youTubeVideoId } = props;
+interface Props {
+  key: string;
+  attributes: Attributes;
+}
+const VideoTile = ({ attributes }: Props) => {
+  const { title, youTubeVideoId, viewCount } = attributes;
   return (
     <Link href={`/video/${youTubeVideoId}`}>
       <Container>

@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
-import { CommentsContext } from "../contexts/CommentsContext";
+import { CommentsContext } from "../../contexts/CommentsContext";
 import styled from "styled-components";
-import { Comment } from "../../types";
+import { Comment } from "../../../types";
 interface Props {
   id: string;
 }
