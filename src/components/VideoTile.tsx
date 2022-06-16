@@ -2,8 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
 const Container = styled.a`
+  padding: 4px;
   display: block;
   width: 240px;
+  transition: 0.3s;
+  border: 3px solid transparent;
+  border-radius: 5px;
+  :hover {
+    border: 3px solid #666;
+  }
   > h2 {
     font-size: 20px;
   }
@@ -22,10 +29,10 @@ const VideoTile = ({ props }: any) => {
         <ThumbNail
           src={`https://img.youtube.com/vi/${youTubeVideoId}/hqdefault.jpg`}
           alt={title}
-          height={192}
+          height={190}
           width={240}
         />
-        <h2>{title}</h2>
+        <h2>{title.length < 46 ? title : `${title.substring(0, 40)}...`}</h2>
         <h4>{viewCount} wyświetleń</h4>
       </Container>
     </Link>

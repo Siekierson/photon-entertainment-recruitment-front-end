@@ -1,5 +1,6 @@
 import ListVideo from "../ListVideo";
 import styled from "styled-components";
+import MoreButton from "../MoreButton";
 import { Video } from "../../../types";
 interface VideoProps {
   videos: Video[];
@@ -11,6 +12,8 @@ const VideoPageRight = ({ videos }: VideoProps) => {
   return (
     <Wrapper>
       <ListVideo videos={videos} />
+      <br />
+      <MoreButton />
     </Wrapper>
   );
 };

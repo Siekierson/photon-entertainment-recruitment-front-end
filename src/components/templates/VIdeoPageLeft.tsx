@@ -1,7 +1,10 @@
+import { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
+import { VideosContext } from "../../contexts/VideosContext";
+import { Video } from "../../../types";
 const Comments = styled.div``;
 const Wrapper = styled.div`
-  width: 70%;
+  width: 60%;
   padding: 20px;
 `;
 const Screen = styled.iframe`
@@ -10,8 +13,12 @@ const Screen = styled.iframe`
 `;
 interface Props {
   id: string;
+  actualVideo: Video;
 }
-const VideoPageLeft = ({ id }: Props) => {
+const VideoPageLeft = ({ id, actualVideo }: Props) => {
+  const { videos } = useContext(VideosContext);
+  const { description } = actualVideo.attributes;
+
   return (
     <Wrapper>
       <Screen
@@ -22,7 +29,7 @@ const VideoPageLeft = ({ id }: Props) => {
         allowFullScreen
       ></Screen>
       <br />
-      <h2>opis</h2>
+      <div>{description}</div>
       <h3>Autor</h3>
       <br />
       <Comments>
