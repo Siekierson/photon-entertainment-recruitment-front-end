@@ -7,6 +7,9 @@ interface VideoProps {
 }
 const Wrapper = styled.div`
   width: 20%;
+  @media (max-width: 850px) {
+    width: 100%;
+  }
 `;
 const VideoPageRight = ({ videos }: VideoProps) => {
   return (

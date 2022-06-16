@@ -8,7 +8,10 @@ const Wrapper = styled.div`
   width: 65%;
   padding: 20px;
   min-height: 100vh;
-  
+  @media (max-width: 850px) {
+    width: 90%;
+    padding: 20px 2%;
+  }
 `;
 const Screen = styled.div`
   position: relative;
@@ -24,12 +27,13 @@ const Screen = styled.div`
   }
 `;
 const Flex = styled.div`
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 `;
 const LikePanel = styled.div`
-  width: 35%;
+  width: 20%;
   font-size: 30px;
   display: flex;
   flex-wrap: no-wrap;
@@ -37,6 +41,7 @@ const LikePanel = styled.div`
   > div {
     display: flex;
     flex-wrap: wrap;
+    margin: 5px;
     > svg,
     h3 {
       display: block;
@@ -46,6 +51,9 @@ const LikePanel = styled.div`
 `;
 const Title = styled.div`
   width: 60%;
+  @media (max-width: 850px) {
+    width: 90%;
+  }
 `;
 const Author = styled.div`
   display: flex;
