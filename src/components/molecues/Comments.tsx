@@ -71,22 +71,28 @@ const Comments = ({ id }: Props) => {
         {comments.length > 0 ? (
           <>
             {comments.map((item: Comment) => {
-              const { date, message } = item;
+              const { filmId, date, message } = item;
               console.log(item);
               return (
-                <CommentWrapper key={`${Math.random()}`}>
-                  <Avatar />
-                  <CommentData>
-                    <h4>
-                      {date.toLocaleDateString("pl", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                    </h4>
-                    <h2>{message}</h2>
-                  </CommentData>
-                </CommentWrapper>
+                <>
+                  {filmId === id ? (
+                    <CommentWrapper key={`${Math.random()}`}>
+                      <Avatar />
+                      <CommentData>
+                        <h4>
+                          {date.toLocaleDateString("pl", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                          })}
+                        </h4>
+                        <h2>{message}</h2>
+                      </CommentData>
+                    </CommentWrapper>
+                  ) : (
+                    ""
+                  )}
+                </>
               );
             })}
           </>
