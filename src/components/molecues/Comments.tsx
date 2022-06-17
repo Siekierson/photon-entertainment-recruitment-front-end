@@ -48,12 +48,12 @@ const Comments = ({ id }: Props) => {
           if (inputValue.length > 0) {
             addComment(id, inputValue);
             setComments([
-              ...comments,
               {
                 filmId: id,
                 date: new Date(),
                 message: inputValue,
               },
+              ...comments,
             ]);
             setInputValue("");
           }
